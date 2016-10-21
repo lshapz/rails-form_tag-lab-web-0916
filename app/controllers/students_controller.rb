@@ -13,8 +13,11 @@ class StudentsController < ApplicationController
   end 
 
   def create
-    session[:form_params] = params.inspect
+    #session[:form_params] = params.inspect
+    session[:show] = params[:first_name] + " " + params[:last_name] 
+    #byebug 
     redirect_to new_student_path
+
   end
 
 
